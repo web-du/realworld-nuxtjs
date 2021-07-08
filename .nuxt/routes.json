@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_8ae6d5d0"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_d1835360"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_d1835360"
+      },
+      {
+        "path": "/profile/:username",
+        "name": "profile",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_cbae5a60"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_3c3197dc"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_44009766"
+      },
+      {
+        "path": "/article/:slug",
+        "name": "article",
+        "component": "D:\\\\dwzFiles\\\\test\\\\test\\\\lagoufed-notes\\\\part3\\\\module3\\\\task3\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_fe19d3c6"
+      }
+    ],
+    "_name": "_4fcf7123"
+  }
+]
