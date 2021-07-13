@@ -33,4 +33,19 @@ export default ({ store }) => {
     // Do something with request error
     return Promise.reject(error)
   })
+
+
+  // 添加响应拦截器
+  // request.interceptors.response.use(function (response) {
+  //   console.log(response, '添加响应拦截器1')
+  //   // 对响应数据做点什么
+  //   return response;
+  // }, function (error) {
+  //   const status = (error.response && error.response.status && error.response.status) || '';
+  //   const data = (error.response && error.response.data) || {};
+  //   console.log(status, data, '添加响应拦截器')
+  //   // 对响应错误做点什么
+  //   return Promise.reject(data);
+  // });
+
 }
