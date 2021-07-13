@@ -1,3 +1,7 @@
+let plugins = []
+if (process.env.NODE_ENV === 'production') {
+  plugins.push("transform-remove-console")
+}
 module.exports = {
     router: {
         linkActiveClass: 'active',
@@ -53,7 +57,11 @@ module.exports = {
         host: '0.0.0.0',
         port: 3000
     },
-
+    build: {
+        babel: {
+            plugins
+        },
+    },
     // 注册插件
     plugins: [
         '~/plugins/request.js',
