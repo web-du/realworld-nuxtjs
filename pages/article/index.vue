@@ -57,10 +57,16 @@ export default {
     ArticleComments
   },
   async asyncData ({ params }) {
-    const { data } = await getArticle(params.slug)
-    const { article } = data
-    const md = new MarkdownIt()
-    article.body = md.render(article.body)
+    let article = {}
+    try {
+      const { data } = await getArticle(params.slug)
+      article = data.article
+      const md = new MarkdownIt()
+      article.body = md.render(article.body)
+    } catch (error) {
+      console.log(error, 'error')
+    }
+    
     return {
       article
     }

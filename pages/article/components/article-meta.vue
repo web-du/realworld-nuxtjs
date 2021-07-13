@@ -100,7 +100,7 @@ export default {
   methods: {
     async deleteArticle (slug) {
       await deleteArticle(slug)
-      this.$router.replace({
+      this.$router.push({
         name: 'home',
         query: {
           tab:'your_feed'

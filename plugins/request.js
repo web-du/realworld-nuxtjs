@@ -11,7 +11,7 @@ export const request = axios.create({
 
 // 通过插件机制获取到上下文对象（query、params、req、res、app、store...）
 // 插件导出函数必须作为 default 成员
-export default ({ store }) => {
+export default ({ store, redirect }) => {
 
   // 请求拦截器
   // Add a request interceptor
@@ -36,16 +36,19 @@ export default ({ store }) => {
 
 
   // 添加响应拦截器
-  // request.interceptors.response.use(function (response) {
-  //   console.log(response, '添加响应拦截器1')
-  //   // 对响应数据做点什么
-  //   return response;
-  // }, function (error) {
-  //   const status = (error.response && error.response.status && error.response.status) || '';
-  //   const data = (error.response && error.response.data) || {};
-  //   console.log(status, data, '添加响应拦截器')
-  //   // 对响应错误做点什么
-  //   return Promise.reject(data);
-  // });
+  request.interceptors.response.use(function (response) {
+    // console.log(response, '添加响应拦截器1')
+    // 对响应数据做点什么
+    return response;
+  }, function (error) {
+    const status = (error.response && error.response.status && error.response.status) || '';
+    const data = (error.response && error.response.data) || {};
+    console.log(status, data, '添加响应拦截器')
+    if (status == 404) {
+      redirect('/')
+    }
+    // 对响应错误做点什么
+    return Promise.reject(data);
+  });
 
 }
